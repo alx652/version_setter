@@ -3,6 +3,8 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../version_setter')
 import version_tools.settings as settings
 import version_tools.utils as utils 
+# the re version, is deprecated, but keeping in codebase for now as it might handy
+# for other purposes.
 # import version_tools.re_setter as re_vs 
 import version_tools.mvn_setter as mvn_vs
 import argparse
