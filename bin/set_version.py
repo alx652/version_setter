@@ -123,7 +123,7 @@ def dispatch():
     for x in actionKeys:
        value = str(actions[x])
        out = out + f'{x}: {value}'+"\n"
-    utils.inform(f'There is no available action called "{action}. The following are defined:' + "\n" + out) 
+    utils.inform(f'There is no available action called "{action}. The following are defined and runnable if True:' + "\n" + out) 
 
 
 dispatch()
