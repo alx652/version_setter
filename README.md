@@ -2,7 +2,7 @@
 
 This tool comes in handy when changing the version of a GSRS module or microservice. 
 
-See (bin/set_version.py)[bin/set_version.py] for instructions on how to run, but here's the short version:
+See [bin/set_version.py](bin/set_version.py) for instructions on how to run, but here's the short version:
 
 ```
 export DEFAULT_VERSION=3.1.2-SNAPSHOT
