@@ -6,7 +6,6 @@ def mvn_bump_standard_project(projectVersion, propertyKeyValues):
   msl.set_project_versions({
     'version_argument': projectVersion
   })
-  print(propertyKeyValues)  
 
   for key in propertyKeyValues.keys():
     msl.set_property_by_tag({
@@ -92,10 +91,13 @@ def mvn_bump_frontend_microservice():
     'version_argument': settings.Settings.getTargetVersion('gsrs_frontend_version'),
   })
 
-def mvn_bump_gateway_microservice():
-  msl.set_project_versions({
-    'version_argument': settings.Settings.getTargetVersion('gsrs_gateway_version'),
-  })
+def mvn_bump_gateway_microservice(): 
+  gsrs_starter_version_tag='gsrs.starter.version'
+  projectVersion = settings.Settings.getTargetVersion('gsrs_impurities_version')
+  propertyKeyValues = {
+    gsrs_starter_version_tag: settings.Settings.getTargetVersion('gsrs_starter_version')
+  }
+  mvn_bump_standard_project(projectVersion, propertyKeyValues)
 
 
 def mvn_bump_impurities_module(): 
@@ -210,7 +212,7 @@ def mvn_bump_substances_microservice():
     gsrs_starter_version_tag: settings.Settings.getTargetVersion('gsrs_starter_version'),
     'gsrs.substance.version': settings.Settings.getTargetVersion('gsrs_substance_version')
   }
-  # mvn_bump_standard_project(projectVersion, propertyKeyValues)
+  mvn_bump_standard_project(projectVersion, propertyKeyValues)
 
 def mvn_bump_starter_module():
   project_root_cwd = os.getcwd()
