@@ -23,3 +23,17 @@ python3 path/to/bin/set_version.py mvn_bump_substances_microservice
 
 ```
 
+
+python packages needed
+
+```
+re
+sys
+os
+argparse
+subprocess
+PurePath
+Path
+inspect
+currentframe
+```

@@ -191,17 +191,17 @@ def mvn_bump_substances_module():
   # os.chdir("gsrs-fda-substance-extension")
   msl.set_property_by_tag({
     'version_argument': settings.Settings.getTargetVersion('applications_api_version'),
-    'tag_argument': 'gsrs.applications.api.version'
+    'tag_argument': 'gsrs.applications-api.version'
   })
   msl.set_property_by_tag({
     'version_argument': settings.Settings.getTargetVersion('clinical_trials_api_version'),
-    'tag_argument': 'gsrs.clinical-trials.api.version'
+    'tag_argument': 'gsrs.clinical-trials-api.version'
   })
   msl.set_property_by_tag({
     'version_argument': settings.Settings.getTargetVersion('products_api_version'),
-    'tag_argument': 'gsrs.products.api.version'
+    'tag_argument': 'gsrs.products-api.version'
   })
-  os.chdir(project_root_cwd)
+  # os.chdir(project_root_cwd)
 
 def mvn_bump_substances_microservice():
   gsrs_starter_version_tag='gsrs.starter.version'
